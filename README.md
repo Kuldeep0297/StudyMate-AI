@@ -20,6 +20,24 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Production Google Login
+
+For a deployed environment, configure the same variables in the hosting provider's production environment:
+
+```env
+AUTH_GOOGLE_ID=your-google-client-id
+AUTH_GOOGLE_SECRET=your-google-client-secret
+AUTH_SECRET=your-production-auth-secret
+GEMINI_API_KEY=your-gemini-api-key
+```
+
+In Google Cloud Console, open **APIs & Services > Credentials**, select the OAuth web client, and add:
+
+- Authorized JavaScript origin: `https://your-production-domain.com`
+- Authorized redirect URI: `https://your-production-domain.com/api/auth/callback/google`
+
+Replace the domain with the exact deployed hostname. Include each hostname you use, such as a custom domain and its Vercel deployment domain. Do not add a trailing slash to the redirect URI.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
