@@ -1,4 +1,3 @@
-
 import { auth } from "@/auth";
 
 export default auth((req) => {
@@ -10,5 +9,10 @@ export default auth((req) => {
 });
 
 export const config = {
-  matcher: ["/", "/dashboard/:path*", "/quiz/:path*"],
+  matcher: [
+    "/",
+    "/dashboard/:path*",
+    "/study/:path*",
+    "/quiz/:path*",
+  ],
 };
