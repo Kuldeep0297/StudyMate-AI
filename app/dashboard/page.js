@@ -139,7 +139,7 @@ export default function Dashboard() {
 
           {/* STUDY MATERIAL */}
           <Link
-            href="/"
+            href="/study"
             className="group rounded-2xl border border-white/10 bg-slate-900/70 p-7 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:shadow-xl hover:shadow-blue-950/20"
           >
             <div className="flex items-center justify-between">
